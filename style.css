@@ -1,0 +1,203 @@
+@font-face {
+    font-family: Web;
+    src: url(/assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Web;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 40px;
+}
+header nav{ 
+    display: flex;
+    justify-content: space-between;
+}
+header p, div i {
+    font-size: 34px;
+}
+nav ul {
+    display: flex;
+    gap: 40px;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+.background-home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10px;
+}
+.background-create{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+}
+#card-group{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card{
+    border: 1px solid #2f2f2f;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+}
+.content{
+    padding: 10px;
+}
+#all-blogs{
+    border-left: 1px solid black;
+    position: fixed;
+    height: 100%;
+    right: -500px;
+    top: 0px;
+    background-color: rgba(254, 254, 254);
+    width: 20%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 80px 20px 20px 20px;
+    overflow-y: auto; /* Added this line */
+    box-sizing: border-box; 
+}
+#all-blogs::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+#all-blogs::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+}
+
+#all-blogs::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+.show{
+    animation: slideToLeft 0.4s ease;
+}
+.hide{
+    animation: slideToRight 0.41s ease;
+}
+@keyframes slideToLeft {
+    from{
+        right: -500px;
+    }
+    to{
+        right: 0px;
+    }  
+}
+@keyframes slideToRight {
+    from{
+        right: 0px;
+    }
+    to{
+        right: -500px;
+    }
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 20px;
+}
+img{
+    width: 48%;
+}
+form button{
+    font-size: 20px;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.side-card{
+    padding-left: 20px;
+    width: 90%;
+    text-align: left;
+    border-bottom: 1px solid #2f2f2f;
+}
+.fixed-right{
+    position: fixed;
+    right: 40px;
+    top: 20px;
+    z-index: 1;
+}
+#hamburger{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+#hamburger div{
+    width: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+.icon #first-bar{
+  transform: rotate(45deg) translate(2px, 4px);  
+}
+.icon #second-bar{
+    opacity: 0;
+}
+.icon #third-bar{
+    transform: rotate(-45deg) translate(6px, -9px);  
+}
+@media (max-width:725px) {
+    #all-blogs{
+        width: 50%;
+    }
+}
+@media (max-width:480px) {
+    .background-create {
+        padding: 10px;
+    }
+    img {
+        width: 80%;
+    }
+    form {
+        width: 90%;
+    }
+}
+@media (max-width:427px) {
+    #all-blogs{
+        width: 100%;
+    }
+}

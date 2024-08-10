@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Create Blog</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/create.html">Create Blog</a></li>
+        </ul>
+      </nav>
+      <p>BLOGS</p>
+    </header>
+    <section class="background-create">
+      <h1>CREATE YOUR BLOG</h1>
+      <img src="/assets/images/noImage.jpg" alt="image" id="top-img" />
+      <form action="">
+        <div>
+          <label for="username">Enter you name</label>
+          <input type="text" id="username" required />
+        </div>
+        <div>
+          <label for="blogTitle">Enter your blog title</label>
+          <input type="text" id="blogTitle" required />
+        </div>
+        <div>
+          <label for="desc">Enter your blog body</label>
+          <textarea type="text" id="desc" rows="10"></textarea>
+          <p id="words">Words: 0</p>
+          <br /><span>Limit: 200-3000 words</span>
+        </div>
+        <div>
+          <label for="blogImage">Attach blog Image</label>
+          <input type="file" id="blogImage" required />
+        </div>
+        <div>
+          <button type="submit">Post a blog</button>
+        </div>
+      </form>
+    </section>
+    <script src="/create.js"></script>
+  </body>
+</html>
